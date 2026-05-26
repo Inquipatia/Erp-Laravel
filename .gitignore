@@ -4,7 +4,6 @@ node_modules/
 npm-debug.log
 yarn-error.log
 **/uploads/
-# **/js/chat.js
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -20,19 +19,29 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 
+# Laravel cache/logs/sessions
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+/bootstrap/cache/*
+
+# Keep folders structure
+!/storage/framework/cache/.gitignore
+!/storage/framework/sessions/.gitignore
+!/storage/framework/views/.gitignore
+!/storage/logs/.gitignore
+!/bootstrap/cache/.gitignore
+
+### Windows ###
+Thumbs.db
+Desktop.ini
+
 ### Linux ###
 *~
-
-# temporary files which can be created if a process still has a handle open of a deleted file
 .fuse_hidden*
-
-# KDE directory preferences
 .directory
-
-# Linux trash folder which might appear on any partition or disk
 .Trash-*
-
-# .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
 ### VisualStudioCode ###
@@ -43,5 +52,4 @@ Homestead.json
 !.vscode/extensions.json
 
 ### VisualStudioCode Patch ###
-# Ignore all local history of files
 .history
